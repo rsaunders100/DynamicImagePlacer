@@ -23,11 +23,9 @@
 #import "UIImageNibPlaceholder+LocalReplacement.h"
 
 @implementation UIImageNibPlaceholder(LocalReplacement)
-#ifdef DEBUG
 - (id) initWithCoder:(id)coder
 {
     NSString * name = [coder decodeObjectForKey:@"UIResourceName"];
     return [UIImage imageNamed:name];
 }
-#endif
 @end

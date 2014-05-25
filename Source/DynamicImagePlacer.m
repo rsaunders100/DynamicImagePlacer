@@ -84,7 +84,6 @@
 
 - (void) startServer
 {
-#ifdef DEBUG
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [UIImage swizzle_method];
@@ -101,7 +100,6 @@
         }
         [self notifyUserForAddress:[NSString stringWithFormat:@"http://%@:%d", [self getIPAddress], 8080]];
     });
-#endif
 }
 
 

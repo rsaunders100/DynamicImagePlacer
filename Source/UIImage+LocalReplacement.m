@@ -27,7 +27,6 @@
 @implementation UIImage (LocalReplacement)
 
 void SwizzleClassMethod(Class class, SEL origin_Method, SEL new_Method) {
-#ifdef DEBUG
     Method origMethod = class_getClassMethod(class, origin_Method);
     Method newMethod = class_getClassMethod(class, new_Method);
     
@@ -37,7 +36,6 @@ void SwizzleClassMethod(Class class, SEL origin_Method, SEL new_Method) {
         class_replaceMethod(class, new_Method, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
     else
         method_exchangeImplementations(origMethod, newMethod);
-#endif
 }
 
 + (void) swizzle_method
