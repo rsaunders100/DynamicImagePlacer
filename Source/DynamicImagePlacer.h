@@ -24,6 +24,6 @@
 #import <Foundation/Foundation.h>
 
 @interface DynamicImagePlacer : NSObject
-+ (id) sharedPlacer;
++ (instancetype) sharedPlacer;
 - (void) startServer;
 @end

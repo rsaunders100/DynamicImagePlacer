@@ -39,7 +39,7 @@
 @implementation DynamicImagePlacer
 
 
-+ (id) sharedPlacer
++ (instancetype) sharedPlacer
 {
     static DynamicImagePlacer* sharedSingleton;
     static dispatch_once_t onceToken;
