@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '5.0'
 
-  s.source       = { :git => "https://github.com/Angelbear/DynamicImagePlacer.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/rsaunders100/DynamicImagePlacer", :tag => "0.0.2" }
 
   s.source_files  = 'Source', 'Source/*.{h,m}'
 
