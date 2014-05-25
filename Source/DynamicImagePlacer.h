@@ -26,4 +26,5 @@
 @interface DynamicImagePlacer : NSObject
 + (instancetype) sharedPlacer;
 - (void) startServer;
+- (void) resetAllImages;
 @end

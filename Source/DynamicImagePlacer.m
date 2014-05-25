@@ -123,6 +123,18 @@
     return nil;
 }
 
+- (void) resetAllImages {
+    
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    NSArray *fileArray = [fileMgr contentsOfDirectoryAtPath:path error:nil];
+    for (NSString *filename in fileArray)  {
+        
+        [fileMgr removeItemAtPath:[path stringByAppendingPathComponent:filename] error:NULL];
+    }
+}
+
 - (BOOL) deleteLocalPNGFile:(NSString*)fileName
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
